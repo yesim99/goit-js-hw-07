@@ -1,4 +1,4 @@
-const input = document.querySelector("#control input");
+const input = document.querySelector("#controls input");
 const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
@@ -10,14 +10,19 @@ function getRandomHexColor() {
 
 createBtn.addEventListener("click", () => {
     const amount = Number(input.value);
-    if (1 < amount > 100); {
+    if (1 < amount || amount > 100); {
         return;
     }
+    boxes.innerHTML = "";
+    createBoxes(amount);
+    input.value = "";
+});
     
+ 
 
+destroyBtn.addEventListener("click", () => {boxes.innerHTML = "";//html siler
 });
 
-destroyBtn.addEventListener("click", destroyBoxes);
  function createBoxes(amount) {
     let size = 30;
 
@@ -34,11 +39,6 @@ destroyBtn.addEventListener("click", destroyBoxes);
       elements.push(div);
       size += 10;
     }
-
-     boxes.append();
-      createBoxes(amount);
-    input.value = ""; 
-}
-  function destroyBoxes() {
-    boxes.innerHTML = "";
+boxes.append(...elements);//içine koymek için spread yöntemi kullanılır. 
+   
 };
