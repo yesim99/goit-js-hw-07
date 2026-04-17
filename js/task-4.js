@@ -11,8 +11,8 @@ function handleSubmit(event) {
         return;
     }
     const data = {
-        email = email,
-        password = password,
+        email : email,
+        password : password,
     };
     console.log(data);
     form.reset();

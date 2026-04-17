@@ -10,7 +10,7 @@ function getRandomHexColor() {
 
 createBtn.addEventListener("click", () => {
     const amount = Number(input.value);
-    if (1 < amount || amount > 100); {
+    if (amount < 1 || amount > 100) {
         return;
     }
     boxes.innerHTML = "";
