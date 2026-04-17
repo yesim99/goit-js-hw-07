@@ -4,11 +4,21 @@ registerForm.addEventListener("submit", handleSubmit);//olay işleyicisi
 function handleSubmit(event) {
     event.preventDefault();
     const form = event.target;//olayı tetikleyen DOM öğesi
-    const login = form.elements.login.value;
-    const password = form.elements.password.value;
-    if (login === " " || password ===" " ) {
-       return  console.log('All form fields must be filled in');
+    const email = form.elements.email.value.trim();
+    const password = form.elements.password.value.trim();
+    if (email === "" || password ==="" ) {
+        alert('All form fields must be filled in');
+        return;
     }
-    console.log(`Login: ${login},Password: ${password}`);
+    const data = {
+        email = email,
+        password = password,
+    };
+    console.log(data);
     form.reset();
 }
+
+
+
+//login yerine email kullanılmalı
+//" " yerine "" + trim() kontrolü yapılmalı

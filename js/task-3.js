@@ -4,7 +4,7 @@ const output = document.querySelector("#name-output");
 
 textInput.addEventListener("input", newFunction);
 function newFunction(event) {
-    const newFunction = event.currentTarget.value.trim();
+    const value = event.currentTarget.value.trim();
     if (value === "") {
         output.textContent = "Anonymous";
     } else {
@@ -12,4 +12,4 @@ function newFunction(event) {
 
     }
 };
-output.textContent = newFunction;
+//output.textContent = newFunction;kod olarak görülür fonk. yazdırılır.
